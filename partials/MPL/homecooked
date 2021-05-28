@@ -1,0 +1,26 @@
+// void setupMPL(){
+//   Wire.beginTransmission(0b11000000); //I2C address of the MPL
+//   Wire.write(0x26);
+//   Wire.write(0x10011011); //sets the MPL to active (bit 0) and sets it to altimeter mode (bit 7) see https://www.nxp.com/docs/en/data-sheet/MPL3115A2.pdf section 14.22.1 of the datasheet for more info
+//   Wire.endTransmission();
+//   Wire.beginTransmission(0b11000000);
+//   Wire.write(0x13);
+//   Wire.write(0x01);
+//   Wire.endTransmission();
+// }
+
+void recordAltitude(){
+  currentAltitude = baro.getAltitude();//I gave up and just used the library, may return to this to try and fix my code to get data of the sensor. 
+  // int32_t alt;
+  // Wire.beginTransmission(0b11000000);
+  // Wire.write(0x01); //Most Significant Bit of the Data OUT_P_MSB
+  // Wire.endTransmission();
+  
+  // Wire.requestFrom(0b11000000,3);
+  // alt = ((uint32_t)Wire.read()) << 24|Wire.read();  // receive DATA
+  // alt |= ((uint32_t)Wire.read()) << 16; // receive DATA
+  // alt |= ((uint32_t)Wire.read()) << 8;  // receive DATA
+  // currentAltitude = alt;
+  // Serial.println(alt);
+  // currentAltitude /= 65536.0;
+  return;

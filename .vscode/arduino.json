@@ -1,0 +1,6 @@
+{
+    "board": "arduino:mbed:nano33ble",
+    "sketch": "devVersion.ino",
+    "port": "COM1",
+    "programmer": "arduino:stlink"
+}
